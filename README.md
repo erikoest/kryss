@@ -2,17 +2,27 @@
 
 Crossword solver
 
-## Usage * Build code: <pre> cargo build release </pre> * Solve a
-crossword: <pre> ./target/release/kryss
-examples/dagogtid-2017-12-22.kryss &gt; help </pre>
+## Usage
+
+* Build code:
+<pre>
+cargo build release
+</pre>
+
+* Solve a crossword:
+<pre>
+./target/release/kryss examples/dagogtid-2017-12-22.kryss
+&gt; help
+</pre>
 
 ## Description
 
 Kryss is a crossword solver with tty user interface. The solver takes
 a description file as input argument:
 
-<pre> ./target/release/kryss [--dictionary dict.json]
-  mycrossword.kryss </pre>
+<pre>
+./target/release/kryss [--dictionary dict.json] mycrossword.kryss
+</pre>
 
 After starting up, kryss lookups up unknown keywords from the
 norwegian crossword helper website https://gratiskryss.no. It then
@@ -91,7 +101,9 @@ Set tty colors on or off.
 
 Each line in the desctiption file represents a word. The format is:
 
-<pre> O,X,Y,L,key[=word] </pre>
+<pre>
+O,X,Y,L,key[=word]
+</pre>
 
 Where:
 
@@ -102,7 +114,9 @@ Where:
 
 The solution sentence has the form:
 
-<pre> S,O1,X1,Y1,L1,O2,X2,Y2,L2,...  </pre>
+<pre>
+S,O1,X1,Y1,L1,O2,X2,Y2,L2,...
+</pre>
 
 It represents a list of words, each of which does not have a
 key. Together they form the solution sentence.
