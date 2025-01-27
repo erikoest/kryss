@@ -107,10 +107,16 @@ O,X,Y,L,key[=word]
 
 Where:
 
-* O is orientation R - right L - left D - down U - up X is horizontal
-  * coordinate of the first character Y is vertical coordinate of the
-  * first character L is length key is the hint word. If the word is
-  * solved, the key is suffixed with an `=word` part.
+* O is orientation
+  * R - right
+  * L - left
+  * D - down
+  * U - up
+* X is horizontal coordinate of the first character
+* Y is vertical coordinate of the first character
+* L is length
+* key is the hint word. If the word is solved, the key is suffixed with
+  an `=word` part.
 
 The solution sentence has the form:
 
