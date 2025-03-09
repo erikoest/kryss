@@ -2,8 +2,9 @@ extern crate kryss;
 
 use kryss::Dictionary;
 use kryss::Board;
-use kryss::Cli;
+use kryss::{KryssApp, KryssKeywordExpander};
 
+use cmdui::CmdUI;
 use std::env;
 
 fn main() {
@@ -29,5 +30,8 @@ fn main() {
     let mut dict = Dictionary::from_file(dname);
     let board = Board::from_file(&args[arg_count], &mut dict);
 
-    Cli::new(dict, board).read_commands();
+    let kw_exp = KryssKeywordExpander::new(&board);
+    let mut kryssapp = KryssApp::new(dict, board);
+
+    CmdUI::new(&mut kryssapp, Some(&kw_exp)).read_commands();
 }

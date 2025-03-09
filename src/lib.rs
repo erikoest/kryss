@@ -5,4 +5,4 @@ mod cli;
 
 pub use crate::dictionary::Dictionary;
 pub use crate::board::{State, Board};
-pub use crate::cli::Cli;
+pub use crate::cli::{KryssApp, KryssKeywordExpander};

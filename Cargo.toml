@@ -17,3 +17,4 @@ rustyline = { version = "14.0.0", features = ["derive"] }
 colored = "*"
 term_size = "*"
 console = "*"
+cmdui = { git = "https://github.com/erikoest/cmdui.git" }
